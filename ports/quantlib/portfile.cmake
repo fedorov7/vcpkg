@@ -21,6 +21,12 @@ vcpkg_replace_string(
     "#    define QL_USE_STD_UNIQUE_PTR"
 )
 
+vcpkg_replace_string(
+    "${SOURCE_PATH}/ql/userconfig.hpp"
+    "//#    define QL_HIGH_RESOLUTION_DATE"
+    "#    define QL_HIGH_RESOLUTION_DATE"
+)
+
 vcpkg_configure_cmake(
     SOURCE_PATH ${SOURCE_PATH}
     PREFER_NINJA
